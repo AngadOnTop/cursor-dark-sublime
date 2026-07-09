@@ -3,6 +3,8 @@
 An unofficial Sublime Text color scheme converted from Cursor's bundled
 `Cursor Dark` theme.
 
+![Uploading Screenshot 2026-07-09 at 1.36.22 pm.png…]()
+
 It includes base editor colors, Cursor-style syntax colors, and extra rules
 for Sublime LSP semantic highlighting so C++ symbols such as namespaces, types,
 methods, properties, and macros can look closer to Cursor.
