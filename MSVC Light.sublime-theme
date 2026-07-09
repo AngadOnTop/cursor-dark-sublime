@@ -1,0 +1,200 @@
+{
+  "extends": "Adaptive.sublime-theme",
+  "variables": {
+    "msvc_bg": "#FFFFFF",
+    "msvc_bg_alt": "#F3F3F3",
+    "msvc_bg_hover": "#E8F2FF",
+    "msvc_bg_selected": "#DDEEFF",
+    "msvc_border": "#D6D6D6",
+    "msvc_text": "#1E1E1E",
+    "msvc_text_dim": "#5F5F5F",
+    "msvc_text_faint": "#7A7A7A",
+    "msvc_accent": "#007ACC",
+    "msvc_accent_alt": "#2B7A7F"
+  },
+  "rules": [
+    {
+      "class": "sidebar_container",
+      "layer0.tint": "var(msvc_bg_alt)",
+      "layer0.opacity": 1.0
+    },
+    {
+      "class": "sidebar_tree",
+      "layer0.tint": "var(msvc_bg_alt)",
+      "layer0.opacity": 1.0,
+      "indent": 12,
+      "indent_offset": 8
+    },
+    {
+      "class": "tree_row",
+      "layer0.tint": "var(msvc_bg_alt)",
+      "layer0.opacity": 0.0
+    },
+    {
+      "class": "tree_row",
+      "attributes": ["hover"],
+      "layer0.tint": "var(msvc_bg_hover)",
+      "layer0.opacity": 1.0
+    },
+    {
+      "class": "tree_row",
+      "attributes": ["selected"],
+      "layer0.tint": "var(msvc_bg_selected)",
+      "layer0.opacity": 1.0
+    },
+    {
+      "class": "tree_label",
+      "fg": "var(msvc_text_dim)"
+    },
+    {
+      "class": "tree_label",
+      "parents": [{"class": "tree_row", "attributes": ["hover"]}],
+      "fg": "var(msvc_text)"
+    },
+    {
+      "class": "tree_label",
+      "parents": [{"class": "tree_row", "attributes": ["selected"]}],
+      "fg": "var(msvc_text)"
+    },
+    {
+      "class": "tabset_control",
+      "layer0.tint": "var(msvc_bg_alt)",
+      "layer0.opacity": 1.0
+    },
+    {
+      "class": "tab_control",
+      "layer0.tint": "var(msvc_bg_alt)",
+      "layer0.opacity": 1.0,
+      "content_margin": [12, 7, 12, 7]
+    },
+    {
+      "class": "tab_control",
+      "attributes": ["selected"],
+      "layer0.tint": "var(msvc_bg)",
+      "layer0.opacity": 1.0
+    },
+    {
+      "class": "tab_control",
+      "attributes": ["hover"],
+      "layer0.tint": "var(msvc_bg_hover)",
+      "layer0.opacity": 1.0
+    },
+    {
+      "class": "tab_label",
+      "fg": "var(msvc_text_faint)"
+    },
+    {
+      "class": "tab_label",
+      "parents": [{"class": "tab_control", "attributes": ["selected"]}],
+      "fg": "var(msvc_text)"
+    },
+    {
+      "class": "tab_label",
+      "parents": [{"class": "tab_control", "attributes": ["hover"]}],
+      "fg": "var(msvc_text)"
+    },
+    {
+      "class": "sheet_contents",
+      "layer0.tint": "var(msvc_bg)",
+      "layer0.opacity": 1.0
+    },
+    {
+      "class": "status_bar",
+      "layer0.tint": "var(msvc_bg_alt)",
+      "layer0.opacity": 1.0
+    },
+    {
+      "class": "status_label",
+      "fg": "var(msvc_text_dim)"
+    },
+    {
+      "class": "panel_control",
+      "layer0.tint": "var(msvc_bg_alt)",
+      "layer0.opacity": 1.0
+    },
+    {
+      "class": "quick_panel",
+      "layer0.tint": "var(msvc_bg)",
+      "layer0.opacity": 1.0
+    },
+    {
+      "class": "quick_panel_row",
+      "layer0.tint": "var(msvc_bg)",
+      "layer0.opacity": 0.0
+    },
+    {
+      "class": "quick_panel_row",
+      "attributes": ["selected"],
+      "layer0.tint": "var(msvc_bg_selected)",
+      "layer0.opacity": 1.0
+    },
+    {
+      "class": "mini_quick_panel_row",
+      "attributes": ["selected"],
+      "layer0.tint": "var(msvc_bg_selected)",
+      "layer0.opacity": 1.0
+    },
+    {
+      "class": "overlay_control",
+      "layer0.tint": "var(msvc_bg)",
+      "layer0.opacity": 1.0
+    },
+    {
+      "class": "popup_control",
+      "layer0.tint": "var(msvc_bg)",
+      "layer0.opacity": 1.0
+    },
+    {
+      "class": "auto_complete_popup",
+      "layer0.tint": "var(msvc_bg)",
+      "layer0.opacity": 1.0
+    },
+    {
+      "class": "button_control",
+      "layer0.tint": "var(msvc_bg_alt)",
+      "layer0.opacity": 1.0
+    },
+    {
+      "class": "button_control",
+      "attributes": ["hover"],
+      "layer0.tint": "var(msvc_bg_hover)",
+      "layer0.opacity": 1.0
+    },
+    {
+      "class": "icon_button_control",
+      "layer0.tint": "var(msvc_bg_alt)",
+      "layer0.opacity": 0.0
+    },
+    {
+      "class": "icon_button_control",
+      "attributes": ["hover"],
+      "layer0.tint": "var(msvc_bg_hover)",
+      "layer0.opacity": 1.0
+    },
+    {
+      "class": "label_control",
+      "fg": "var(msvc_text)"
+    },
+    {
+      "class": "text_line_control",
+      "layer0.tint": "var(msvc_bg)",
+      "layer0.opacity": 1.0,
+      "fg": "var(msvc_text)"
+    },
+    {
+      "class": "scroll_bar_control",
+      "layer0.tint": "var(msvc_bg_alt)",
+      "layer0.opacity": 0.0
+    },
+    {
+      "class": "scroll_puck_control",
+      "layer0.tint": "var(msvc_text)",
+      "layer0.opacity": 0.18
+    },
+    {
+      "class": "scroll_puck_control",
+      "attributes": ["hover"],
+      "layer0.opacity": 0.32
+    }
+  ]
+}

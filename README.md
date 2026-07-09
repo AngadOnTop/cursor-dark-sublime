@@ -1,20 +1,24 @@
 # Cursor Dark and MSVC Light for Sublime Text
 
-Unofficial Sublime Text color schemes:
+Unofficial Sublime Text themes and color schemes:
 
 - `Cursor Dark`, converted from Cursor's bundled dark theme.
 - `MSVC Light`, inspired by the classic Visual Studio/MSVC light editor look.
 
-![Uploading Screenshot 2026-07-09 at 1.36.22 pm.png…]()
+Each style has two files:
 
-It includes base editor colors, Cursor-style syntax colors, and extra rules
-for Sublime LSP semantic highlighting so C++ symbols such as namespaces, types,
-methods, properties, and macros can look closer to Cursor.
+- `.sublime-theme` for Sublime's UI chrome, including sidebar, tabs, panels,
+  popups, buttons, and status bar.
+- `.sublime-color-scheme` for editor and syntax colors.
+
+The color schemes include extra rules for Sublime LSP semantic highlighting so
+C++ symbols such as namespaces, types, methods, properties, and macros can look
+closer to Cursor.
 
 ## Install
 
-Place the `.sublime-color-scheme` files in your Sublime Text user package
-folder:
+Place the `.sublime-theme` and `.sublime-color-scheme` files in your Sublime
+Text user package folder:
 
 ```text
 ~/Library/Application Support/Sublime Text/Packages/User/
@@ -24,21 +28,26 @@ Then open `Preferences: Settings` and choose one:
 
 ```json
 {
-  "theme": "Adaptive.sublime-theme",
+  "theme": "Cursor Dark.sublime-theme",
   "color_scheme": "Cursor Dark.sublime-color-scheme"
 }
 ```
 
 ```json
 {
-  "theme": "Adaptive.sublime-theme",
+  "theme": "MSVC Light.sublime-theme",
   "color_scheme": "MSVC Light.sublime-color-scheme"
 }
 ```
 
 On macOS, you can open Sublime settings with `Cmd+,`.
 
-You can also switch from the command palette with `UI: Select Color Scheme`.
+You can also switch from the command palette:
+
+```text
+UI: Select Theme
+UI: Select Color Scheme
+```
 
 ## LSP Semantic Highlighting
 
@@ -62,10 +71,9 @@ distinguish on its own.
 
 ## Notes
 
-Sublime and Cursor/VS Code use different theme systems, so this is a color
-scheme port rather than a full UI theme clone. It changes editor and syntax
-colors; the surrounding Sublime UI is still controlled by your selected
-Sublime theme.
+Sublime and Cursor/VS Code use different theme systems, so this is an
+approximation rather than a pixel-perfect clone. The UI themes extend Sublime's
+built-in `Adaptive.sublime-theme` and tint the major UI surfaces.
 
 Cursor, Visual Studio, and the original bundled themes belong to their
 respective owners. This repo is just an unofficial Sublime Text conversion and
