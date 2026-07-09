@@ -13,7 +13,8 @@
     "cursor_accent_alt": "#88C0D0",
     "cursor_icon": "#F0F0F0",
     "cursor_icon_hover": "#FFFFFF",
-    "cursor_icon_selected": "#88C0D0"
+    "cursor_icon_selected": "#88C0D0",
+    "file_icon_tint": "#F0F0F0"
   },
   "rules": [
     {

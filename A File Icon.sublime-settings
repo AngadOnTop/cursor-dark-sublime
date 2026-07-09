@@ -1,0 +1,9 @@
+{
+	"color": "var(file_icon_tint)",
+	"color_on_hover": "var(file_icon_tint)",
+	"color_on_select": "var(file_icon_tint)",
+	"opacity": 0.95,
+	"opacity_on_hover": 1,
+	"opacity_on_select": 1,
+	"size": 8
+}

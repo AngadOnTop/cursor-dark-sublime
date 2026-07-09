@@ -13,7 +13,8 @@
     "msvc_accent_alt": "#2B7A7F",
     "msvc_icon": "#111111",
     "msvc_icon_hover": "#000000",
-    "msvc_icon_selected": "#005A9E"
+    "msvc_icon_selected": "#005A9E",
+    "file_icon_tint": "#111111"
   },
   "rules": [
     {

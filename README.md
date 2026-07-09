@@ -52,6 +52,8 @@ UI: Select Color Scheme
 For richer sidebar file-type icons, install `A File Icon` from Package Control.
 The included themes improve the contrast of Sublime's built-in icons, while
 `A File Icon` adds recognizable icons for common languages and file formats.
+If file icons are too dark on Cursor Dark, place `A File Icon.sublime-settings`
+in the same User package folder too.
 
 ## LSP Semantic Highlighting
 
