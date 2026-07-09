@@ -1,0 +1,238 @@
+{
+  "name": "MSVC Light",
+  "author": "Created from an MSVC/Visual Studio light-theme reference screenshot",
+  "variables": {
+    "bg": "#FFFFFF",
+    "fg": "#1E1E1E",
+    "muted": "#8A8A8A",
+    "line": "#F5F5F5",
+    "border": "#E5E5E5",
+    "keyword": "#0000FF",
+    "control": "#AF00DB",
+    "type": "#2B7A7F",
+    "function": "#1E1E1E",
+    "string": "#A31515",
+    "number": "#098658",
+    "comment": "#008000",
+    "property": "#795E26",
+    "accent": "#007ACC"
+  },
+  "globals": {
+    "background": "var(bg)",
+    "foreground": "var(fg)",
+    "caret": "#000000",
+    "selection": "#ADD6FF",
+    "selection_border": "#ADD6FF",
+    "inactive_selection": "#E5EBF1",
+    "line_highlight": "var(line)",
+    "gutter": "var(bg)",
+    "gutter_foreground": "#858585",
+    "gutter_foreground_highlight": "#2B2B2B",
+    "invisibles": "#D6D6D6",
+    "guide": "#DCDCDC",
+    "active_guide": "#C6C6C6",
+    "find_highlight": "#FFF2A8",
+    "find_highlight_foreground": "var(fg)",
+    "brackets_foreground": "#000000",
+    "brackets_options": "underline",
+    "tags_options": "stippled_underline",
+    "misspelling": "#D13438"
+  },
+  "rules": [
+    {
+      "name": "LSP: semantic token enablement layer",
+      "scope": "meta.semantic-token",
+      "background": "#FFFFFE"
+    },
+    {
+      "name": "LSP: namespace",
+      "scope": "meta.semantic-token.namespace",
+      "foreground": "var(type)"
+    },
+    {
+      "name": "LSP: class struct enum type",
+      "scope": "meta.semantic-token.class, meta.semantic-token.struct, meta.semantic-token.enum, meta.semantic-token.type",
+      "foreground": "var(type)"
+    },
+    {
+      "name": "LSP: function method",
+      "scope": "meta.semantic-token.function, meta.semantic-token.method",
+      "foreground": "var(function)"
+    },
+    {
+      "name": "LSP: property member",
+      "scope": "meta.semantic-token.property",
+      "foreground": "var(property)"
+    },
+    {
+      "name": "LSP: variable parameter",
+      "scope": "meta.semantic-token.variable, meta.semantic-token.parameter",
+      "foreground": "var(fg)"
+    },
+    {
+      "name": "LSP: enum member constant",
+      "scope": "meta.semantic-token.enummember",
+      "foreground": "var(number)"
+    },
+    {
+      "name": "LSP: macro",
+      "scope": "meta.semantic-token.macro",
+      "foreground": "var(control)"
+    },
+    {
+      "name": "LSP: keyword modifier operator",
+      "scope": "meta.semantic-token.keyword, meta.semantic-token.modifier, meta.semantic-token.operator",
+      "foreground": "var(keyword)"
+    },
+    {
+      "name": "LSP: string number",
+      "scope": "meta.semantic-token.string",
+      "foreground": "var(string)"
+    },
+    {
+      "name": "LSP: number",
+      "scope": "meta.semantic-token.number",
+      "foreground": "var(number)"
+    },
+    {
+      "name": "Comments",
+      "scope": "comment, punctuation.definition.comment",
+      "foreground": "var(comment)",
+      "font_style": "italic"
+    },
+    {
+      "name": "Strings",
+      "scope": "string, punctuation.definition.string",
+      "foreground": "var(string)"
+    },
+    {
+      "name": "Numbers constants",
+      "scope": "constant.numeric, constant.language, constant.character",
+      "foreground": "var(number)"
+    },
+    {
+      "name": "Language constants",
+      "scope": "constant.language.boolean, constant.language.null, constant.language.undefined",
+      "foreground": "var(keyword)"
+    },
+    {
+      "name": "Keywords",
+      "scope": "keyword, storage.modifier, storage.type",
+      "foreground": "var(keyword)"
+    },
+    {
+      "name": "Control keywords",
+      "scope": "keyword.control, keyword.operator.expression, keyword.operator.word, keyword.other.using",
+      "foreground": "var(control)"
+    },
+    {
+      "name": "Operators punctuation",
+      "scope": "keyword.operator, punctuation.separator, punctuation.terminator, punctuation.accessor, punctuation.section",
+      "foreground": "var(fg)"
+    },
+    {
+      "name": "Preprocessor",
+      "scope": "meta.preprocessor, keyword.control.directive, punctuation.definition.directive",
+      "foreground": "var(control)"
+    },
+    {
+      "name": "Types classes structs",
+      "scope": "entity.name.type, entity.name.class, entity.name.struct, entity.name.enum, entity.name.union, support.type, support.class, storage.type.user-defined",
+      "foreground": "var(type)"
+    },
+    {
+      "name": "C++ namespaces",
+      "scope": "source.c++ entity.name.namespace, source.c++ variable.namespace, source.c++ support.namespace, source.c++ meta.path variable.other, source.c++ meta.path entity.name.namespace, source.c++ meta.path support.namespace",
+      "foreground": "var(type)"
+    },
+    {
+      "name": "C++ standard members",
+      "scope": "source.c++ meta.path variable.other.member, source.c++ meta.path variable.other.readwrite, source.c++ meta.path variable.other.object, source.c++ meta.member.access variable.other.member, source.c++ variable.other.member, source.c++ support.variable, source.c++ support.constant",
+      "foreground": "var(property)"
+    },
+    {
+      "name": "C++ scope accessors",
+      "scope": "source.c++ punctuation.accessor.double-colon, source.c++ punctuation.separator.namespace.access, source.c++ punctuation.accessor.dot, source.c++ keyword.operator.accessor",
+      "foreground": "#707070"
+    },
+    {
+      "name": "C++ templates",
+      "scope": "source.c++ meta.template entity.name.type, source.c++ meta.template support.type, source.c++ punctuation.definition.template, source.c++ punctuation.section.angle-brackets",
+      "foreground": "var(type)"
+    },
+    {
+      "name": "C++ this",
+      "scope": "source.c++ variable.language, source.c++ variable.language.this",
+      "foreground": "var(keyword)"
+    },
+    {
+      "name": "Function declarations",
+      "scope": "entity.name.function, meta.function entity.name.function, meta.function.definition entity.name.function, meta.function.declaration entity.name.function",
+      "foreground": "var(function)"
+    },
+    {
+      "name": "Function calls",
+      "scope": "meta.function-call entity.name.function, meta.function-call variable.function, variable.function, support.function",
+      "foreground": "var(function)"
+    },
+    {
+      "name": "Properties attributes",
+      "scope": "variable.other.member, variable.other.property, support.variable.property, entity.other.attribute-name, meta.property-name",
+      "foreground": "var(property)"
+    },
+    {
+      "name": "Variables",
+      "scope": "variable, variable.other, variable.parameter",
+      "foreground": "var(fg)"
+    },
+    {
+      "name": "Invalid",
+      "scope": "invalid, invalid.illegal",
+      "foreground": "#FFFFFF",
+      "background": "#D13438"
+    },
+    {
+      "name": "Markdown heading",
+      "scope": "markup.heading, entity.name.section",
+      "foreground": "var(keyword)",
+      "font_style": "bold"
+    },
+    {
+      "name": "Markdown bold",
+      "scope": "markup.bold",
+      "foreground": "var(fg)",
+      "font_style": "bold"
+    },
+    {
+      "name": "Markdown italic",
+      "scope": "markup.italic",
+      "foreground": "var(fg)",
+      "font_style": "italic"
+    },
+    {
+      "name": "Markdown raw",
+      "scope": "markup.raw, markup.inline.raw",
+      "foreground": "var(string)"
+    },
+    {
+      "name": "Markdown links",
+      "scope": "markup.underline.link, string.other.link, meta.link",
+      "foreground": "var(accent)"
+    },
+    {
+      "name": "Diff inserted",
+      "scope": "markup.inserted",
+      "foreground": "#008000"
+    },
+    {
+      "name": "Diff deleted",
+      "scope": "markup.deleted",
+      "foreground": "#A31515"
+    },
+    {
+      "name": "Diff changed",
+      "scope": "markup.changed",
+      "foreground": "#795E26"
+    }
+  ]
+}

@@ -1,7 +1,9 @@
-# Cursor Dark for Sublime Text
+# Cursor Dark and MSVC Light for Sublime Text
 
-An unofficial Sublime Text color scheme converted from Cursor's bundled
-`Cursor Dark` theme.
+Unofficial Sublime Text color schemes:
+
+- `Cursor Dark`, converted from Cursor's bundled dark theme.
+- `MSVC Light`, inspired by the classic Visual Studio/MSVC light editor look.
 
 ![Uploading Screenshot 2026-07-09 at 1.36.22 pm.png…]()
 
@@ -11,14 +13,14 @@ methods, properties, and macros can look closer to Cursor.
 
 ## Install
 
-Place `Cursor Dark.sublime-color-scheme` in your Sublime Text user package
+Place the `.sublime-color-scheme` files in your Sublime Text user package
 folder:
 
 ```text
 ~/Library/Application Support/Sublime Text/Packages/User/
 ```
 
-Then open `Preferences: Settings` and set:
+Then open `Preferences: Settings` and choose one:
 
 ```json
 {
@@ -27,7 +29,16 @@ Then open `Preferences: Settings` and set:
 }
 ```
 
+```json
+{
+  "theme": "Adaptive.sublime-theme",
+  "color_scheme": "MSVC Light.sublime-color-scheme"
+}
+```
+
 On macOS, you can open Sublime settings with `Cmd+,`.
+
+You can also switch from the command palette with `UI: Select Color Scheme`.
 
 ## LSP Semantic Highlighting
 
@@ -56,5 +67,6 @@ scheme port rather than a full UI theme clone. It changes editor and syntax
 colors; the surrounding Sublime UI is still controlled by your selected
 Sublime theme.
 
-Cursor and the original bundled theme belong to their respective owners. This
-repo is just an unofficial Sublime Text conversion.
+Cursor, Visual Studio, and the original bundled themes belong to their
+respective owners. This repo is just an unofficial Sublime Text conversion and
+companion light scheme.
