@@ -280,43 +280,17 @@
       ]
     },
     {
-      "class": "icon_control",
-      "tint_modifier": [
-        255,
-        255,
-        255,
-        0.82
-      ]
-    },
-    {
-      "class": "image_control",
-      "tint_modifier": [
-        255,
-        255,
-        255,
-        0.82
-      ]
-    },
-    {
       "class": "disclosure_button_control",
-      "tint_modifier": [
-        255,
-        255,
-        255,
-        0.82
-      ]
+      "layer0.tint": "var(cursor_icon)",
+      "layer0.opacity": 1
     },
     {
       "class": "disclosure_button_control",
       "attributes": [
         "hover"
       ],
-      "tint_modifier": [
-        255,
-        255,
-        255,
-        1
-      ]
+      "layer0.tint": "var(cursor_icon_selected)",
+      "layer0.opacity": 1
     },
     {
       "class": "close_button",
@@ -405,30 +379,13 @@
       "fg": "var(cursor_text)"
     },
     {
-      "class": "icon_file_type",
-      "content_margin": [
-        8,
-        8
-      ],
-      "tint_modifier": [
-        255,
-        255,
-        255,
-        0.92
-      ]
-    },
-    {
       "class": "icon_folder",
       "content_margin": [
         8,
         8
       ],
-      "tint_modifier": [
-        136,
-        192,
-        208,
-        0.95
-      ]
+      "layer0.tint": "var(cursor_accent_alt)",
+      "layer0.opacity": 1
     },
     {
       "class": "icon_folder_loading",
@@ -436,12 +393,8 @@
         8,
         8
       ],
-      "tint_modifier": [
-        136,
-        192,
-        208,
-        0.95
-      ]
+      "layer0.tint": "var(cursor_accent_alt)",
+      "layer0.opacity": 1
     },
     {
       "class": "icon_folder_dup",
@@ -449,12 +402,8 @@
         8,
         8
       ],
-      "tint_modifier": [
-        136,
-        192,
-        208,
-        0.85
-      ]
+      "layer0.tint": "var(cursor_accent_alt)",
+      "layer0.opacity": 0.85
     },
     {
       "class": "vcs_status_badge",
@@ -475,12 +424,8 @@
         8,
         8
       ],
-      "tint_modifier": [
-        255,
-        255,
-        255,
-        0.95
-      ]
+      "layer0.tint": "var(cursor_icon)",
+      "layer0.opacity": 1
     },
     {
       "class": "sidebar_button_control",
@@ -488,12 +433,8 @@
         10,
         10
       ],
-      "tint_modifier": [
-        255,
-        255,
-        255,
-        0.95
-      ]
+      "layer0.tint": "var(cursor_icon)",
+      "layer0.opacity": 1
     },
     {
       "class": "panel_button_control",
@@ -501,21 +442,13 @@
         10,
         10
       ],
-      "tint_modifier": [
-        255,
-        255,
-        255,
-        0.95
-      ]
+      "layer0.tint": "var(cursor_icon)",
+      "layer0.opacity": 1
     },
     {
       "class": "status_button",
-      "tint_modifier": [
-        255,
-        255,
-        255,
-        0.95
-      ]
+      "layer0.tint": "var(cursor_icon)",
+      "layer0.opacity": 1
     }
   ]
 }
