@@ -7,40 +7,47 @@
     "msvc_bg_selected": "#DDEEFF",
     "msvc_border": "#D6D6D6",
     "msvc_text": "#1E1E1E",
-    "msvc_text_dim": "#5F5F5F",
-    "msvc_text_faint": "#7A7A7A",
+    "msvc_text_dim": "#3F3F3F",
+    "msvc_text_faint": "#555555",
     "msvc_accent": "#007ACC",
-    "msvc_accent_alt": "#2B7A7F"
+    "msvc_accent_alt": "#2B7A7F",
+    "msvc_icon": "#202020",
+    "msvc_icon_hover": "#000000",
+    "msvc_icon_selected": "#005A9E"
   },
   "rules": [
     {
       "class": "sidebar_container",
       "layer0.tint": "var(msvc_bg_alt)",
-      "layer0.opacity": 1.0
+      "layer0.opacity": 1
     },
     {
       "class": "sidebar_tree",
       "layer0.tint": "var(msvc_bg_alt)",
-      "layer0.opacity": 1.0,
+      "layer0.opacity": 1,
       "indent": 12,
       "indent_offset": 8
     },
     {
       "class": "tree_row",
       "layer0.tint": "var(msvc_bg_alt)",
-      "layer0.opacity": 0.0
+      "layer0.opacity": 0
     },
     {
       "class": "tree_row",
-      "attributes": ["hover"],
+      "attributes": [
+        "hover"
+      ],
       "layer0.tint": "var(msvc_bg_hover)",
-      "layer0.opacity": 1.0
+      "layer0.opacity": 1
     },
     {
       "class": "tree_row",
-      "attributes": ["selected"],
+      "attributes": [
+        "selected"
+      ],
       "layer0.tint": "var(msvc_bg_selected)",
-      "layer0.opacity": 1.0
+      "layer0.opacity": 1
     },
     {
       "class": "tree_label",
@@ -48,36 +55,59 @@
     },
     {
       "class": "tree_label",
-      "parents": [{"class": "tree_row", "attributes": ["hover"]}],
+      "parents": [
+        {
+          "class": "tree_row",
+          "attributes": [
+            "hover"
+          ]
+        }
+      ],
       "fg": "var(msvc_text)"
     },
     {
       "class": "tree_label",
-      "parents": [{"class": "tree_row", "attributes": ["selected"]}],
+      "parents": [
+        {
+          "class": "tree_row",
+          "attributes": [
+            "selected"
+          ]
+        }
+      ],
       "fg": "var(msvc_text)"
     },
     {
       "class": "tabset_control",
       "layer0.tint": "var(msvc_bg_alt)",
-      "layer0.opacity": 1.0
+      "layer0.opacity": 1
     },
     {
       "class": "tab_control",
       "layer0.tint": "var(msvc_bg_alt)",
-      "layer0.opacity": 1.0,
-      "content_margin": [12, 7, 12, 7]
+      "layer0.opacity": 1,
+      "content_margin": [
+        12,
+        7,
+        12,
+        7
+      ]
     },
     {
       "class": "tab_control",
-      "attributes": ["selected"],
+      "attributes": [
+        "selected"
+      ],
       "layer0.tint": "var(msvc_bg)",
-      "layer0.opacity": 1.0
+      "layer0.opacity": 1
     },
     {
       "class": "tab_control",
-      "attributes": ["hover"],
+      "attributes": [
+        "hover"
+      ],
       "layer0.tint": "var(msvc_bg_hover)",
-      "layer0.opacity": 1.0
+      "layer0.opacity": 1
     },
     {
       "class": "tab_label",
@@ -85,23 +115,37 @@
     },
     {
       "class": "tab_label",
-      "parents": [{"class": "tab_control", "attributes": ["selected"]}],
+      "parents": [
+        {
+          "class": "tab_control",
+          "attributes": [
+            "selected"
+          ]
+        }
+      ],
       "fg": "var(msvc_text)"
     },
     {
       "class": "tab_label",
-      "parents": [{"class": "tab_control", "attributes": ["hover"]}],
+      "parents": [
+        {
+          "class": "tab_control",
+          "attributes": [
+            "hover"
+          ]
+        }
+      ],
       "fg": "var(msvc_text)"
     },
     {
       "class": "sheet_contents",
       "layer0.tint": "var(msvc_bg)",
-      "layer0.opacity": 1.0
+      "layer0.opacity": 1
     },
     {
       "class": "status_bar",
       "layer0.tint": "var(msvc_bg_alt)",
-      "layer0.opacity": 1.0
+      "layer0.opacity": 1
     },
     {
       "class": "status_label",
@@ -110,66 +154,74 @@
     {
       "class": "panel_control",
       "layer0.tint": "var(msvc_bg_alt)",
-      "layer0.opacity": 1.0
+      "layer0.opacity": 1
     },
     {
       "class": "quick_panel",
       "layer0.tint": "var(msvc_bg)",
-      "layer0.opacity": 1.0
+      "layer0.opacity": 1
     },
     {
       "class": "quick_panel_row",
       "layer0.tint": "var(msvc_bg)",
-      "layer0.opacity": 0.0
+      "layer0.opacity": 0
     },
     {
       "class": "quick_panel_row",
-      "attributes": ["selected"],
+      "attributes": [
+        "selected"
+      ],
       "layer0.tint": "var(msvc_bg_selected)",
-      "layer0.opacity": 1.0
+      "layer0.opacity": 1
     },
     {
       "class": "mini_quick_panel_row",
-      "attributes": ["selected"],
+      "attributes": [
+        "selected"
+      ],
       "layer0.tint": "var(msvc_bg_selected)",
-      "layer0.opacity": 1.0
+      "layer0.opacity": 1
     },
     {
       "class": "overlay_control",
       "layer0.tint": "var(msvc_bg)",
-      "layer0.opacity": 1.0
+      "layer0.opacity": 1
     },
     {
       "class": "popup_control",
       "layer0.tint": "var(msvc_bg)",
-      "layer0.opacity": 1.0
+      "layer0.opacity": 1
     },
     {
       "class": "auto_complete_popup",
       "layer0.tint": "var(msvc_bg)",
-      "layer0.opacity": 1.0
+      "layer0.opacity": 1
     },
     {
       "class": "button_control",
       "layer0.tint": "var(msvc_bg_alt)",
-      "layer0.opacity": 1.0
+      "layer0.opacity": 1
     },
     {
       "class": "button_control",
-      "attributes": ["hover"],
+      "attributes": [
+        "hover"
+      ],
       "layer0.tint": "var(msvc_bg_hover)",
-      "layer0.opacity": 1.0
+      "layer0.opacity": 1
     },
     {
       "class": "icon_button_control",
       "layer0.tint": "var(msvc_bg_alt)",
-      "layer0.opacity": 0.0
+      "layer0.opacity": 0
     },
     {
       "class": "icon_button_control",
-      "attributes": ["hover"],
+      "attributes": [
+        "hover"
+      ],
       "layer0.tint": "var(msvc_bg_hover)",
-      "layer0.opacity": 1.0
+      "layer0.opacity": 1
     },
     {
       "class": "label_control",
@@ -178,13 +230,13 @@
     {
       "class": "text_line_control",
       "layer0.tint": "var(msvc_bg)",
-      "layer0.opacity": 1.0,
+      "layer0.opacity": 1,
       "fg": "var(msvc_text)"
     },
     {
       "class": "scroll_bar_control",
       "layer0.tint": "var(msvc_bg_alt)",
-      "layer0.opacity": 0.0
+      "layer0.opacity": 0
     },
     {
       "class": "scroll_puck_control",
@@ -193,8 +245,136 @@
     },
     {
       "class": "scroll_puck_control",
-      "attributes": ["hover"],
+      "attributes": [
+        "hover"
+      ],
       "layer0.opacity": 0.32
+    },
+    {
+      "class": "icon_button_control",
+      "content_margin": [
+        6,
+        6
+      ],
+      "layer0.tint": "var(msvc_bg_alt)",
+      "layer0.opacity": 0,
+      "tint_modifier": [
+        0,
+        0,
+        0,
+        0.82
+      ]
+    },
+    {
+      "class": "icon_button_control",
+      "attributes": [
+        "hover"
+      ],
+      "layer0.tint": "var(msvc_bg_hover)",
+      "layer0.opacity": 1,
+      "tint_modifier": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "class": "icon_control",
+      "tint_modifier": [
+        0,
+        0,
+        0,
+        0.82
+      ]
+    },
+    {
+      "class": "image_control",
+      "tint_modifier": [
+        0,
+        0,
+        0,
+        0.82
+      ]
+    },
+    {
+      "class": "disclosure_button_control",
+      "tint_modifier": [
+        0,
+        0,
+        0,
+        0.82
+      ]
+    },
+    {
+      "class": "disclosure_button_control",
+      "attributes": [
+        "hover"
+      ],
+      "tint_modifier": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "class": "close_button",
+      "tint_modifier": [
+        0,
+        0,
+        0,
+        0.72
+      ]
+    },
+    {
+      "class": "close_button",
+      "attributes": [
+        "hover"
+      ],
+      "tint_modifier": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "class": "tab_close_button",
+      "tint_modifier": [
+        0,
+        0,
+        0,
+        0.72
+      ]
+    },
+    {
+      "class": "tab_close_button",
+      "attributes": [
+        "hover"
+      ],
+      "tint_modifier": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "class": "label_control",
+      "fg": "var(msvc_text)"
+    },
+    {
+      "class": "quick_panel_label",
+      "fg": "var(msvc_text)"
+    },
+    {
+      "class": "quick_panel_path_label",
+      "fg": "var(msvc_text_dim)"
+    },
+    {
+      "class": "sidebar_heading",
+      "fg": "var(msvc_text)"
     }
   ]
 }

@@ -10,21 +10,21 @@
     "purple": "#AAA0FA",
     "pink": "#E394DC",
     "red": "#E34671",
-    "text": "#D6D6DD",
-    "muted": "#E4E4E45E"
+    "text": "#E4E4E4",
+    "muted": "#B8B8B8"
   },
   "globals": {
     "background": "#181818",
-    "foreground": "#E4E4E4EB",
-    "caret": "#E4E4E4EB",
+    "foreground": "#E4E4E4",
+    "caret": "#FFFFFF",
     "selection": "#40404099",
     "selection_border": "#40404099",
     "inactive_selection": "#40404077",
     "line_highlight": "#262626",
     "gutter": "#181818",
-    "gutter_foreground": "#E4E4E442",
-    "gutter_foreground_highlight": "#E4E4E4EB",
-    "invisibles": "#505050B3",
+    "gutter_foreground": "#8D8D8D",
+    "gutter_foreground_highlight": "#E4E4E4",
+    "invisibles": "#666666",
     "guide": "#E4E4E413",
     "active_guide": "#E4E4E430",
     "find_highlight": "#88C0D066",
@@ -61,12 +61,12 @@
     {
       "name": "LSP: semantic variable",
       "scope": "meta.semantic-token.variable",
-      "foreground": "#D6D6DD"
+      "foreground": "#E4E4E4"
     },
     {
       "name": "LSP: semantic parameter",
       "scope": "meta.semantic-token.parameter",
-      "foreground": "#D6D6DD"
+      "foreground": "#E4E4E4"
     },
     {
       "name": "LSP: semantic enum member",
@@ -91,7 +91,7 @@
     {
       "name": "Sublime C++: exact dot accessor in function blocks",
       "scope": "source.c++ meta.function.c++ meta.block.c++ punctuation.accessor.dot.c++, source.c++ punctuation.accessor.dot.c++",
-      "foreground": "#D6D6DD"
+      "foreground": "#E4E4E4"
     },
     {
       "name": "Sublime C++: namespace path prefix like std",
@@ -106,7 +106,7 @@
     {
       "name": "Sublime C++: scope resolution and member access operators",
       "scope": "source.c++ punctuation.accessor.double-colon, source.c++ punctuation.separator.namespace.access, source.c++ keyword.operator.accessor, source.c++ punctuation.accessor",
-      "foreground": "#D6D6DD"
+      "foreground": "#E4E4E4"
     },
     {
       "name": "Sublime C++: classes structs enums and template types",
@@ -126,7 +126,7 @@
     {
       "name": "Sublime C++: template punctuation",
       "scope": "source.c++ punctuation.definition.template, source.c++ punctuation.section.angle-brackets, source.c++ meta.template punctuation",
-      "foreground": "#D6D6DD"
+      "foreground": "#E4E4E4"
     },
     {
       "name": "Sublime C++: language constants and booleans",
@@ -176,7 +176,7 @@
     {
       "name": "Python: Ellipsis",
       "scope": "constant.other.ellipsis.python",
-      "foreground": "#CCCCCC"
+      "foreground": "#DCDCDC"
     },
     {
       "name": "Haskell: Generic Type Variable",
@@ -531,7 +531,7 @@
     {
       "name": "Namespaces",
       "scope": "entity.name.namespace",
-      "foreground": "#CCCCCC"
+      "foreground": "#DCDCDC"
     },
     {
       "name": "Variables (All)",
@@ -615,7 +615,7 @@
     },
     {
       "scope": "storage.modifier.reference, storage.modifier.pointer",
-      "foreground": "#CCCCCC"
+      "foreground": "#DCDCDC"
     },
     {
       "name": "Java Storage",
@@ -740,7 +740,7 @@
     {
       "name": "Markdown: Heading Punctuation",
       "scope": "punctuation.definition.heading.markdown",
-      "foreground": "#E4E4E45E"
+      "foreground": "#8D8D8D"
     },
     {
       "name": "Markdown: Setext Headings",
@@ -1200,7 +1200,7 @@
     {
       "name": "Xi: Markdown List Punctuation",
       "scope": "beginning.punctuation.definition.list.markdown.xi",
-      "foreground": "#E4E4E45E"
+      "foreground": "#8D8D8D"
     },
     {
       "name": "Xi: Link Character",
@@ -1225,7 +1225,7 @@
     {
       "name": "Xi: Dimmed Elements",
       "scope": "punctuation.definition.tag.xi",
-      "foreground": "#E4E4E45E"
+      "foreground": "#8D8D8D"
     },
     {
       "name": "C#/C++: Labels and Scope Resolution",
@@ -1245,13 +1245,13 @@
     {
       "name": "Comment",
       "scope": "comment, punctuation.definition.comment, comment.line.double-slash, comment.block.documentation",
-      "foreground": "#E4E4E45E",
+      "foreground": "#8D8D8D",
       "font_style": "italic"
     },
     {
       "name": "Markdown: Quote",
       "scope": "markup.quote.markdown",
-      "foreground": "#E4E4E45E"
+      "foreground": "#8D8D8D"
     },
     {
       "name": "punctuation.definition.block.sequence.item.yaml",
