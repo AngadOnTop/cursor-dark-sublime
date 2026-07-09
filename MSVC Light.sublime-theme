@@ -385,11 +385,7 @@
         8
       ],
       "layer0.opacity": 1,
-      "layer0.texture": "Packages/zzzz Mizu Icons/icons/folder.png",
-      "layer0.inner_margin": [
-        0,
-        0
-      ]
+      "layer0.tint": "var(msvc_icon_selected)"
     },
     {
       "class": "icon_folder_loading",
@@ -398,11 +394,7 @@
         8
       ],
       "layer0.opacity": 1,
-      "layer0.texture": "Packages/zzzz Mizu Icons/icons/folder.png",
-      "layer0.inner_margin": [
-        0,
-        0
-      ]
+      "layer0.tint": "var(msvc_icon_selected)"
     },
     {
       "class": "icon_folder_dup",
@@ -411,11 +403,7 @@
         8
       ],
       "layer0.opacity": 0.85,
-      "layer0.texture": "Packages/zzzz Mizu Icons/icons/folder.png",
-      "layer0.inner_margin": [
-        0,
-        0
-      ]
+      "layer0.tint": "var(msvc_icon_selected)"
     },
     {
       "class": "vcs_status_badge",
