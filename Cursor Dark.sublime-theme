@@ -7,11 +7,11 @@
     "cursor_hover": "#262626",
     "cursor_border": "#2A2A2A",
     "cursor_text": "#E4E4E4",
-    "cursor_text_dim": "#B8B8B8",
-    "cursor_text_faint": "#9A9A9A",
+    "cursor_text_dim": "#C8C8C8",
+    "cursor_text_faint": "#B0B0B0",
     "cursor_accent": "#81A1C1",
     "cursor_accent_alt": "#88C0D0",
-    "cursor_icon": "#CFCFCF",
+    "cursor_icon": "#F0F0F0",
     "cursor_icon_hover": "#FFFFFF",
     "cursor_icon_selected": "#88C0D0"
   },
@@ -375,6 +375,147 @@
     {
       "class": "sidebar_heading",
       "fg": "var(cursor_text)"
+    },
+    {
+      "class": "sidebar_label",
+      "fg": "var(cursor_text_dim)"
+    },
+    {
+      "class": "sidebar_label",
+      "parents": [
+        {
+          "class": "tree_row",
+          "attributes": [
+            "hover"
+          ]
+        }
+      ],
+      "fg": "var(cursor_text)"
+    },
+    {
+      "class": "sidebar_label",
+      "parents": [
+        {
+          "class": "tree_row",
+          "attributes": [
+            "selected"
+          ]
+        }
+      ],
+      "fg": "var(cursor_text)"
+    },
+    {
+      "class": "icon_file_type",
+      "content_margin": [
+        8,
+        8
+      ],
+      "tint_modifier": [
+        255,
+        255,
+        255,
+        0.92
+      ]
+    },
+    {
+      "class": "icon_folder",
+      "content_margin": [
+        8,
+        8
+      ],
+      "tint_modifier": [
+        136,
+        192,
+        208,
+        0.95
+      ]
+    },
+    {
+      "class": "icon_folder_loading",
+      "content_margin": [
+        8,
+        8
+      ],
+      "tint_modifier": [
+        136,
+        192,
+        208,
+        0.95
+      ]
+    },
+    {
+      "class": "icon_folder_dup",
+      "content_margin": [
+        8,
+        8
+      ],
+      "tint_modifier": [
+        136,
+        192,
+        208,
+        0.85
+      ]
+    },
+    {
+      "class": "vcs_status_badge",
+      "content_margin": [
+        7,
+        7
+      ],
+      "tint_modifier": [
+        168,
+        204,
+        124,
+        1
+      ]
+    },
+    {
+      "class": "disclosure_button_control",
+      "content_margin": [
+        8,
+        8
+      ],
+      "tint_modifier": [
+        255,
+        255,
+        255,
+        0.95
+      ]
+    },
+    {
+      "class": "sidebar_button_control",
+      "content_margin": [
+        10,
+        10
+      ],
+      "tint_modifier": [
+        255,
+        255,
+        255,
+        0.95
+      ]
+    },
+    {
+      "class": "panel_button_control",
+      "content_margin": [
+        10,
+        10
+      ],
+      "tint_modifier": [
+        255,
+        255,
+        255,
+        0.95
+      ]
+    },
+    {
+      "class": "status_button",
+      "tint_modifier": [
+        255,
+        255,
+        255,
+        0.95
+      ]
     }
   ]
 }

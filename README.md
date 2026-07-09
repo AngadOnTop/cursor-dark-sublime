@@ -49,6 +49,10 @@ UI: Select Theme
 UI: Select Color Scheme
 ```
 
+For richer sidebar file-type icons, install `A File Icon` from Package Control.
+The included themes improve the contrast of Sublime's built-in icons, while
+`A File Icon` adds recognizable icons for common languages and file formats.
+
 ## LSP Semantic Highlighting
 
 For Cursor-like C++ highlighting, install:

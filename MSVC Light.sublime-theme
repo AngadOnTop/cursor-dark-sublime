@@ -6,12 +6,12 @@
     "msvc_bg_hover": "#E8F2FF",
     "msvc_bg_selected": "#DDEEFF",
     "msvc_border": "#D6D6D6",
-    "msvc_text": "#1E1E1E",
-    "msvc_text_dim": "#3F3F3F",
-    "msvc_text_faint": "#555555",
+    "msvc_text": "#111111",
+    "msvc_text_dim": "#2B2B2B",
+    "msvc_text_faint": "#3F3F3F",
     "msvc_accent": "#007ACC",
     "msvc_accent_alt": "#2B7A7F",
-    "msvc_icon": "#202020",
+    "msvc_icon": "#111111",
     "msvc_icon_hover": "#000000",
     "msvc_icon_selected": "#005A9E"
   },
@@ -375,6 +375,147 @@
     {
       "class": "sidebar_heading",
       "fg": "var(msvc_text)"
+    },
+    {
+      "class": "sidebar_label",
+      "fg": "var(msvc_text_dim)"
+    },
+    {
+      "class": "sidebar_label",
+      "parents": [
+        {
+          "class": "tree_row",
+          "attributes": [
+            "hover"
+          ]
+        }
+      ],
+      "fg": "var(msvc_text)"
+    },
+    {
+      "class": "sidebar_label",
+      "parents": [
+        {
+          "class": "tree_row",
+          "attributes": [
+            "selected"
+          ]
+        }
+      ],
+      "fg": "var(msvc_text)"
+    },
+    {
+      "class": "icon_file_type",
+      "content_margin": [
+        8,
+        8
+      ],
+      "tint_modifier": [
+        0,
+        0,
+        0,
+        0.92
+      ]
+    },
+    {
+      "class": "icon_folder",
+      "content_margin": [
+        8,
+        8
+      ],
+      "tint_modifier": [
+        0,
+        90,
+        158,
+        0.95
+      ]
+    },
+    {
+      "class": "icon_folder_loading",
+      "content_margin": [
+        8,
+        8
+      ],
+      "tint_modifier": [
+        0,
+        90,
+        158,
+        0.95
+      ]
+    },
+    {
+      "class": "icon_folder_dup",
+      "content_margin": [
+        8,
+        8
+      ],
+      "tint_modifier": [
+        0,
+        90,
+        158,
+        0.85
+      ]
+    },
+    {
+      "class": "vcs_status_badge",
+      "content_margin": [
+        7,
+        7
+      ],
+      "tint_modifier": [
+        0,
+        128,
+        0,
+        1
+      ]
+    },
+    {
+      "class": "disclosure_button_control",
+      "content_margin": [
+        8,
+        8
+      ],
+      "tint_modifier": [
+        0,
+        0,
+        0,
+        0.95
+      ]
+    },
+    {
+      "class": "sidebar_button_control",
+      "content_margin": [
+        10,
+        10
+      ],
+      "tint_modifier": [
+        0,
+        0,
+        0,
+        0.95
+      ]
+    },
+    {
+      "class": "panel_button_control",
+      "content_margin": [
+        10,
+        10
+      ],
+      "tint_modifier": [
+        0,
+        0,
+        0,
+        0.95
+      ]
+    },
+    {
+      "class": "status_button",
+      "tint_modifier": [
+        0,
+        0,
+        0,
+        0.95
+      ]
     }
   ]
 }
