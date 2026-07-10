@@ -13,7 +13,8 @@
     "cursor_accent_alt": "#88C0D0",
     "cursor_icon": "#F0F0F0",
     "cursor_icon_hover": "#FFFFFF",
-    "cursor_icon_selected": "#88C0D0"
+    "cursor_icon_selected": "#88C0D0",
+    "mizu_folder": "#ffa040"
   },
   "rules": [
     {
@@ -385,7 +386,7 @@
         8
       ],
       "layer0.opacity": 1,
-      "layer0.tint": "var(cursor_accent_alt)"
+      "layer0.tint": "var(mizu_folder)"
     },
     {
       "class": "icon_folder_loading",
@@ -394,7 +395,7 @@
         8
       ],
       "layer0.opacity": 1,
-      "layer0.tint": "var(cursor_accent_alt)"
+      "layer0.tint": "var(mizu_folder)"
     },
     {
       "class": "icon_folder_dup",
@@ -403,7 +404,7 @@
         8
       ],
       "layer0.opacity": 0.85,
-      "layer0.tint": "var(cursor_accent_alt)"
+      "layer0.tint": "var(mizu_folder)"
     },
     {
       "class": "vcs_status_badge",
