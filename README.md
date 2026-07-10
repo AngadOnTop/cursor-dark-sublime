@@ -3,7 +3,11 @@
 Unofficial Sublime Text themes and color schemes:
 
 - `Cursor Dark`, converted from Cursor's bundled dark theme.
+  <img width="1440" height="900" alt="Screenshot 2026-07-10 at 5 33 09 pm" src="https://github.com/user-attachments/assets/ac056607-c5b7-4f81-9908-6640de9a40c9" />
+
 - `MSVC Light`, inspired by the classic Visual Studio/MSVC light editor look.
+  <img width="1440" height="900" alt="Screenshot 2026-07-10 at 5 33 28 pm" src="https://github.com/user-attachments/assets/781a9da6-fbb6-4425-88d0-5d61a963ea87" />
+
 
 Each style has two files:
 
