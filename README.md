@@ -81,6 +81,17 @@ automatically.
 The included Mizu PNGs have their white VS Code export matte stripped so the
 icons render transparently on both dark and light Sublime themes.
 
+For Sublime's active-theme custom icon method, run:
+
+```sh
+python3 tools/install-mizu-theme-icons.py "/path/to/Mizu Icons 2.10.1.vsix"
+```
+
+That script reads `Preferences.sublime-settings`, creates an `icons/` folder for
+the active theme, renders the original Mizu VSIX SVGs into `.png` and `@2x.png`
+files, mirrors them into `Packages/User/icons/`, and writes the matching
+`.tmPreferences` files.
+
 ## LSP Semantic Highlighting
 
 For Cursor-like C++ highlighting, install:
