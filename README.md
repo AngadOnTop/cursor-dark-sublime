@@ -56,8 +56,18 @@ Then place the `zzzz Mizu Icons` folder in:
 ~/Library/Application Support/Sublime Text/Packages/
 ```
 
-The Mizu package uses the same `file_type_*.png` names as `A File Icon`. For a
-persistent override, also copy `zzzz Mizu Icons/icons/multi/` into:
+The Mizu package uses the same `file_type_*.png` names as `A File Icon`. For
+Sublime's native custom-icon method, copy those PNGs into:
+
+```text
+~/Library/Application Support/Sublime Text/Packages/User/icons/
+```
+
+Then add `.tmPreferences` mappings in `Packages/User/` that point a scope to the
+icon name. For example, C++ uses `source.c++` and `file_type_c++`.
+
+For an A File Icon persistent override, also copy `zzzz Mizu Icons/icons/multi/`
+into:
 
 ```text
 ~/Library/Application Support/Sublime Text/Packages/A File Icon/icons/multi/
@@ -65,7 +75,8 @@ persistent override, also copy `zzzz Mizu Icons/icons/multi/` into:
 
 Place `A File Icon.sublime-settings` in `Packages/User/` to keep icon tinting
 disabled. You can run `./install.zsh` from this repo to copy the themes, color
-schemes, Mizu icons, and A File Icon overrides automatically.
+schemes, Mizu icons, User icon mappings, and A File Icon overrides
+automatically.
 
 ## LSP Semantic Highlighting
 
