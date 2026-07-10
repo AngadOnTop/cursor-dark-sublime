@@ -78,6 +78,9 @@ disabled. You can run `./install.zsh` from this repo to copy the themes, color
 schemes, Mizu icons, User icon mappings, and A File Icon overrides
 automatically.
 
+The included Mizu PNGs have their white VS Code export matte stripped so the
+icons render transparently on both dark and light Sublime themes.
+
 ## LSP Semantic Highlighting
 
 For Cursor-like C++ highlighting, install:
