@@ -56,9 +56,16 @@ Then place the `zzzz Mizu Icons` folder in:
 ~/Library/Application Support/Sublime Text/Packages/
 ```
 
-The Mizu package uses the same `file_type_*.png` names as `A File Icon`, so it
-overrides those sidebar file icons while keeping the original Mizu colors. Place
-`A File Icon.sublime-settings` in `Packages/User/` to keep icon tinting disabled.
+The Mizu package uses the same `file_type_*.png` names as `A File Icon`. For a
+persistent override, also copy `zzzz Mizu Icons/icons/multi/` into:
+
+```text
+~/Library/Application Support/Sublime Text/Packages/A File Icon/icons/multi/
+```
+
+Place `A File Icon.sublime-settings` in `Packages/User/` to keep icon tinting
+disabled. You can run `./install.zsh` from this repo to copy the themes, color
+schemes, Mizu icons, and A File Icon overrides automatically.
 
 ## LSP Semantic Highlighting
 
