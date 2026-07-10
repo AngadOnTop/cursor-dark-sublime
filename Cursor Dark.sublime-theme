@@ -14,6 +14,7 @@
     "cursor_icon": "#F0F0F0",
     "cursor_icon_hover": "#FFFFFF",
     "cursor_icon_selected": "#88C0D0",
+    "cursor_status_text": "#FFFFFF",
     "mizu_folder": "#ffa040"
   },
   "rules": [
@@ -145,12 +146,12 @@
     },
     {
       "class": "status_bar",
-      "layer0.tint": "var(cursor_bg_dark)",
+      "layer0.tint": "#101010",
       "layer0.opacity": 1
     },
     {
       "class": "status_label",
-      "fg": "var(cursor_text_dim)"
+      "fg": "var(cursor_status_text)"
     },
     {
       "class": "panel_control",
@@ -448,7 +449,8 @@
     },
     {
       "class": "status_button",
-      "layer0.tint": "var(cursor_icon)",
+      "fg": "var(cursor_status_text)",
+      "layer0.tint": "var(cursor_status_text)",
       "layer0.opacity": 1
     }
   ]

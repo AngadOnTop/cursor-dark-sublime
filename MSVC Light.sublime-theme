@@ -14,6 +14,7 @@
     "msvc_icon": "#111111",
     "msvc_icon_hover": "#000000",
     "msvc_icon_selected": "#005A9E",
+    "msvc_status_text": "#000000",
     "mizu_folder": "#ffa040"
   },
   "rules": [
@@ -145,12 +146,12 @@
     },
     {
       "class": "status_bar",
-      "layer0.tint": "var(msvc_bg_alt)",
+      "layer0.tint": "#FFFFFF",
       "layer0.opacity": 1
     },
     {
       "class": "status_label",
-      "fg": "var(msvc_text_dim)"
+      "fg": "var(msvc_status_text)"
     },
     {
       "class": "panel_control",
@@ -448,7 +449,8 @@
     },
     {
       "class": "status_button",
-      "layer0.tint": "var(msvc_icon)",
+      "fg": "var(msvc_status_text)",
+      "layer0.tint": "var(msvc_status_text)",
       "layer0.opacity": 1
     }
   ]
