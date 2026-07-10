@@ -14,6 +14,9 @@
     "msvc_icon": "#111111",
     "msvc_icon_hover": "#000000",
     "msvc_icon_selected": "#005A9E",
+    "msvc_status_bg": "#FFFFFF",
+    "msvc_status_button": "#FFFFFF",
+    "msvc_status_button_hover": "#E8F2FF",
     "msvc_status_text": "#000000",
     "mizu_folder": "#ffa040"
   },
@@ -146,7 +149,7 @@
     },
     {
       "class": "status_bar",
-      "layer0.tint": "#FFFFFF",
+      "layer0.tint": "var(msvc_status_bg)",
       "layer0.opacity": 1
     },
     {
@@ -450,7 +453,16 @@
     {
       "class": "status_button",
       "fg": "var(msvc_status_text)",
-      "layer0.tint": "var(msvc_status_text)",
+      "layer0.tint": "var(msvc_status_button)",
+      "layer0.opacity": 0
+    },
+    {
+      "class": "status_button",
+      "attributes": [
+        "hover"
+      ],
+      "fg": "var(msvc_status_text)",
+      "layer0.tint": "var(msvc_status_button_hover)",
       "layer0.opacity": 1
     }
   ]

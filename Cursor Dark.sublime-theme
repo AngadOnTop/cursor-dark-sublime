@@ -14,6 +14,9 @@
     "cursor_icon": "#F0F0F0",
     "cursor_icon_hover": "#FFFFFF",
     "cursor_icon_selected": "#88C0D0",
+    "cursor_status_bg": "#101010",
+    "cursor_status_button": "#101010",
+    "cursor_status_button_hover": "#242424",
     "cursor_status_text": "#FFFFFF",
     "mizu_folder": "#ffa040"
   },
@@ -146,7 +149,7 @@
     },
     {
       "class": "status_bar",
-      "layer0.tint": "#101010",
+      "layer0.tint": "var(cursor_status_bg)",
       "layer0.opacity": 1
     },
     {
@@ -450,7 +453,16 @@
     {
       "class": "status_button",
       "fg": "var(cursor_status_text)",
-      "layer0.tint": "var(cursor_status_text)",
+      "layer0.tint": "var(cursor_status_button)",
+      "layer0.opacity": 0
+    },
+    {
+      "class": "status_button",
+      "attributes": [
+        "hover"
+      ],
+      "fg": "var(cursor_status_text)",
+      "layer0.tint": "var(cursor_status_button_hover)",
       "layer0.opacity": 1
     }
   ]
