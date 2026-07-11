@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-from collections import deque
 from pathlib import Path
 import json
 import re
@@ -9,13 +8,11 @@ import sys
 import tempfile
 import zipfile
 
-from PIL import Image
-
-
 TARGETS = [
     ("C", "source.c", "c", "file_type_c"),
     ("C++", "source.c++", "cpp", "file_type_c++"),
     ("C++ Header", "source.c++.header", "hpp", "file_type_cppheader"),
+    ("C#", "source.cs", "cs", "file_type_csharp"),
     ("CMake", "source.cmake", "cmake", "file_type_cmake"),
     ("CSS", "source.css", "css", "file_type_css"),
     ("Go", "source.go", "go", "file_type_go"),
@@ -51,52 +48,12 @@ def theme_folder_name(theme):
     return theme.removesuffix(".sublime-theme")
 
 
-def is_background(pixel):
-    r, g, b, a = pixel
-    return a != 0 and r >= 238 and g >= 238 and b >= 238 and max(r, g, b) - min(r, g, b) <= 30
-
-
-def strip_edge_matte(path):
-    image = Image.open(path).convert("RGBA")
-    width, height = image.size
-    pixels = image.load()
-    seen = set()
-    queue = deque()
-
-    for x in range(width):
-        queue.append((x, 0))
-        queue.append((x, height - 1))
-    for y in range(height):
-        queue.append((0, y))
-        queue.append((width - 1, y))
-
-    while queue:
-        x, y = queue.popleft()
-        if (x, y) in seen or not (0 <= x < width and 0 <= y < height):
-            continue
-        seen.add((x, y))
-        if not is_background(pixels[x, y]):
-            continue
-
-        r, g, b, _ = pixels[x, y]
-        pixels[x, y] = (r, g, b, 0)
-        queue.extend(((x - 1, y), (x + 1, y), (x, y - 1), (x, y + 1)))
-
-    image.save(path)
-
-
-def render_svg(svg_path, size, output_path):
-    with tempfile.TemporaryDirectory(prefix="mizu-render-") as tmp:
-        tmp_dir = Path(tmp)
-        subprocess.run(
-            ["qlmanage", "-t", "-s", str(size), "-o", str(tmp_dir), str(svg_path)],
-            check=True,
-            stdout=subprocess.DEVNULL,
-            stderr=subprocess.DEVNULL,
-        )
-        rendered = tmp_dir / f"{svg_path.name}.png"
-        shutil.copyfile(rendered, output_path)
-    strip_edge_matte(output_path)
+def render_svgs(jobs):
+    renderer = Path(__file__).with_name("render-mizu-svg.swift")
+    arguments = ["swift", str(renderer)]
+    for svg_path, size, output_path in jobs:
+        arguments.extend((str(svg_path), str(size), str(output_path)))
+    subprocess.run(arguments, check=True)
 
 
 def write_icon_pref(user_dir, label, scope, icon):
@@ -139,6 +96,8 @@ def main():
             icon_theme = json.loads(archive.read("extension/icon-theme.json"))
             definitions = icon_theme["iconDefinitions"]
             extensions = icon_theme["fileExtensions"]
+            generated = []
+            jobs = []
 
             for label, scope, extension, icon in TARGETS:
                 definition_id = str(extensions[extension])
@@ -148,9 +107,12 @@ def main():
 
                 rendered = tmp_dir / f"{icon}.png"
                 rendered_2x = tmp_dir / f"{icon}@2x.png"
-                render_svg(svg_path, 16, rendered)
-                render_svg(svg_path, 32, rendered_2x)
+                jobs.extend(((svg_path, 16, rendered), (svg_path, 32, rendered_2x)))
+                generated.append((label, scope, icon, rendered, rendered_2x))
 
+            render_svgs(jobs)
+
+            for label, scope, icon, rendered, rendered_2x in generated:
                 for icon_dir in icon_dirs:
                     shutil.copyfile(rendered, icon_dir / rendered.name)
                     shutil.copyfile(rendered_2x, icon_dir / rendered_2x.name)

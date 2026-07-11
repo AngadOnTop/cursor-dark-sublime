@@ -92,8 +92,8 @@ python3 tools/install-mizu-theme-icons.py "/path/to/Mizu Icons 2.10.1.vsix"
 ```
 
 That script reads `Preferences.sublime-settings`, creates an `icons/` folder for
-the active theme, renders the original Mizu VSIX SVGs into `.png` and `@2x.png`
-files, mirrors them into `Packages/User/icons/`, and writes the matching
+the active theme, renders the original Mizu VSIX SVGs into crisp native `.png`
+and Retina `@2x.png` assets, mirrors them into `Packages/User/icons/`, and writes the matching
 `.tmPreferences` files.
 
 ## LSP Semantic Highlighting

@@ -46,12 +46,13 @@ rsync -a "$repo_dir/zzzz Mizu Icons/icons/multi/" "$user_icons_dir/"
 
 for icon_png in "$user_icons_dir"/file_type_*.png(N); do
   [[ "$icon_png" == *@2x.png ]] && continue
-  cp "$icon_png" "${icon_png:r}@2x.png"
+  [[ -f "${icon_png:r}@2x.png" ]] || cp "$icon_png" "${icon_png:r}@2x.png"
 done
 
 write_icon_pref "C" "source.c" "file_type_c"
 write_icon_pref "C++" "source.c++" "file_type_c++"
 write_icon_pref "C++ Header" "source.c++.header" "file_type_cppheader"
+write_icon_pref "C#" "source.cs" "file_type_csharp"
 write_icon_pref "CMake" "source.cmake" "file_type_cmake"
 write_icon_pref "CSS" "source.css" "file_type_css"
 write_icon_pref "Go" "source.go" "file_type_go"
