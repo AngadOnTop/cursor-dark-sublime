@@ -37,13 +37,15 @@ for index in stride(from: 1, to: arguments.count, by: 3) {
     NSGraphicsContext.current = NSGraphicsContext(bitmapImageRep: bitmap)
     NSColor.clear.setFill()
     NSRect(x: 0, y: 0, width: size, height: size).fill()
-    let padding = max(1, size / 16)
+    let isCSharp = URL(fileURLWithPath: input).lastPathComponent == "csharp.svg"
+    let horizontalPadding = isCSharp ? 0 : max(1, size / 16)
+    let verticalPadding = isCSharp ? max(2, size / 8) : max(1, size / 16)
     image.draw(
         in: NSRect(
-            x: padding,
-            y: padding,
-            width: size - (padding * 2),
-            height: size - (padding * 2)
+            x: horizontalPadding,
+            y: verticalPadding,
+            width: size - (horizontalPadding * 2),
+            height: size - (verticalPadding * 2)
         ),
         from: .zero,
         operation: .sourceOver,

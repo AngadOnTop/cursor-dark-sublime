@@ -210,11 +210,15 @@ def extract_mappings(a_file_icon, icon_theme):
             icon_name = preference.get("settings", {}).get("icon")
             if not icon_name:
                 continue
-            icon_path, fallback = resolve_icon_path(icon_name, icon_theme, definitions, by_stem)
+            source_icon_name = "file_type_csharp" if icon_name == "file_type_c#" else icon_name
+            resource_icon_name = (
+                "file_type_csharp_v2" if source_icon_name == "file_type_csharp" else source_icon_name
+            )
+            icon_path, fallback = resolve_icon_path(source_icon_name, icon_theme, definitions, by_stem)
             if fallback:
                 fallbacks.append(fallback)
-            preference["settings"]["icon"] = ICON_PREFIX + icon_name
-            mappings.append((PurePosixPath(name).name, preference, icon_name, icon_path))
+            preference["settings"]["icon"] = ICON_PREFIX + resource_icon_name
+            mappings.append((PurePosixPath(name).name, preference, resource_icon_name, icon_path))
     return mappings, sorted(set(fallbacks))
 
 
@@ -353,7 +357,10 @@ def prefix_user_overrides(user_dir):
     for path in sorted(user_dir.glob("Icon - Mizu *.tmPreferences")):
         value = plistlib.loads(path.read_bytes())
         icon = value.get("settings", {}).get("icon", "")
-        if icon and not icon.startswith(ICON_PREFIX):
+        if icon in ("file_type_csharp", "mizu_file_type_csharp"):
+            value["settings"]["icon"] = "mizu_file_type_csharp_v2"
+            path.write_bytes(plistlib.dumps(value, fmt=plistlib.FMT_XML, sort_keys=False))
+        elif icon and not icon.startswith(ICON_PREFIX):
             value["settings"]["icon"] = ICON_PREFIX + icon
             path.write_bytes(plistlib.dumps(value, fmt=plistlib.FMT_XML, sort_keys=False))
 
