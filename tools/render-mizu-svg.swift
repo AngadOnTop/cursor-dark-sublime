@@ -37,8 +37,14 @@ for index in stride(from: 1, to: arguments.count, by: 3) {
     NSGraphicsContext.current = NSGraphicsContext(bitmapImageRep: bitmap)
     NSColor.clear.setFill()
     NSRect(x: 0, y: 0, width: size, height: size).fill()
+    let padding = max(1, size / 16)
     image.draw(
-        in: NSRect(x: 0, y: 0, width: size, height: size),
+        in: NSRect(
+            x: padding,
+            y: padding,
+            width: size - (padding * 2),
+            height: size - (padding * 2)
+        ),
         from: .zero,
         operation: .sourceOver,
         fraction: 1

@@ -85,7 +85,21 @@ automatically.
 The included Mizu PNGs have their white VS Code export matte stripped so the
 icons render transparently on both dark and light Sublime themes.
 
-For Sublime's active-theme custom icon method, run:
+For a complete, isolated Sublime package with A File Icon's syntax and filename
+mappings, run:
+
+```sh
+python3 tools/install-mizu-file-icons.py "/path/to/Mizu Icons 2.10.1.vsix"
+```
+
+This creates `Packages/Mizu File Icons` without editing Package Control
+packages. It generates centered transparent 1x, 2x, and 3x PNGs, copies the
+installed A File Icon scope mappings and filename alias syntaxes under unique
+`mizu_` resource names, installs the original Mizu folder textures, validates
+every reference, and creates a timestamped backup before changing Sublime's
+User settings.
+
+For the smaller active-theme-only custom icon method, run:
 
 ```sh
 python3 tools/install-mizu-theme-icons.py "/path/to/Mizu Icons 2.10.1.vsix"
